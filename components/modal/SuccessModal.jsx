@@ -51,19 +51,19 @@ const SuccessModal = ({ txHash, openMintModal, handleOnClose }) => {
                   </div>
 
                   <div className="mt-4">
-                    {/* <button
+                    <button
                       type="button"
                       className="text-white bg-slate-900 focus:ring-4 focus:outline-none focus:ring-purple-300 font-medium rounded-xl text-sm px-4 py-2 hover:opacity-70"
                       //   onClick={closeModal}
                     >
                       <a
                         target="_blank"
-                        href={'https://goerli.etherscan.io/tx/' + txHash}
+                        href={'https://testnet.bscscan.com/tx/' + txHash}
                       >
-                        Confirm on Etherscan
+                        Confirm on BSC Scan
                       </a>
                     </button>
-                    &nbsp;&nbsp;&nbsp; */}
+                    &nbsp;&nbsp;&nbsp;
                     <button
                       type="button"
                       className="text-white bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 focus:ring-4 focus:outline-none focus:ring-purple-300 font-medium rounded-xl text-sm px-4 py-2 hover:opacity-70"

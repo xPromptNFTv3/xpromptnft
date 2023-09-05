@@ -9,6 +9,8 @@ import { config } from '@/abi';
 import convertArrayToObject from '@/utils/convertToObject';
 import { Chain } from '@wagmi/core'
 import { alchemyProvider } from 'wagmi/providers/alchemy';
+import { goerli, bscTestnet } from 'wagmi/chains';
+
 
 
 const opBNBTestnet = {
@@ -53,7 +55,7 @@ const GreenfieldTestnet = {
 
 const Explore = () => {
   const [listedNFTs, setListedNFTs] = useState([]);
-  const chainName = 'opBNBTestnet';
+  const chainName = 'bscTestnet';
   const API_URL = `https://testnets-api.opensea.io/v2/chain/${chainName}/contract/${config.xpromptV3}/nfts`;
   const apiKey = '474531d79fc84739a3b03950c9430bda';
 

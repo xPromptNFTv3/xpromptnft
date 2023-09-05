@@ -11,11 +11,11 @@ export const DataProvider = ({ children }) => {
   const { address } = useAccount();
 
   const empty = [];
-
+//testing
   const fetchData = async () => {
     setIsLoading(true);
     const apiKey = process.env.NEXT_PUBLIC_OPENSEA_KEY;
-    const chainName = 'goerli';
+    const chainName = 'bscTestnet';
     const walletAddress = address;
     const url = `https://testnets-api.opensea.io/v2/chain/${chainName}/account/${walletAddress}/nfts?limit=50`;
 

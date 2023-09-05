@@ -3,7 +3,7 @@ import { darkTheme } from '@rainbow-me/rainbowkit';
 import { getDefaultWallets } from '@rainbow-me/rainbowkit';
 import { configureChains, createClient, WagmiConfig } from 'wagmi';
 import { publicProvider } from 'wagmi/providers/public';
-import { goerli } from 'wagmi/chains';
+import { goerli, bscTestnet } from 'wagmi/chains';
 import {
   RainbowKitProvider,
   connectorsForWallets,
@@ -61,7 +61,7 @@ import { DataProvider } from '@/context/DataContext';
   };
 
 const { provider, chains } = configureChains(
-  [opBNBTestnet,GreenfieldTestnet],
+  [opBNBTestnet,GreenfieldTestnet,bscTestnet],
   [
     jsonRpcProvider({
       rpc: (chain) => ({ http: chain.rpcUrls.default.http[0] }),

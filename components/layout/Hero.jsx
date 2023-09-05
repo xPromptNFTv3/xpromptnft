@@ -8,14 +8,12 @@ const Hero = () => {
       <div className="flex flex-col items-center">
         <p className="w-full text-center text-[32px] leading-[38px] sm:text-7xl sm:leading-[84px] font-bold mt-[calc(128px-96px)] sm:mt-[calc(160px-96px)] transition-all">
           <span className="text-transparent bg-clip-text bg-primer">
-            Unleash Your Creativity
+            Dream It, Mint It, Own It
           </span>{" "}
-          with xPromptNFT Generative AI
+          XpromptNFT AI Makes Your Imagination Marketable!
         </p>
         <p className="max-w-[936px] text-center mt-3 sm:mt-4 text-base sm:text-xl text-gray-170 font-normal transition-all">
-          Transform your prompts into digital masterpieces, convert them into
-          NFTs, and sell on our marketplace. Explore Premium AI Prompts on
-          xPromptNFT's Marketplace!
+          Unlock the Power of AI to Craft, Mint, and Trade Unique NFTs: Your Imagination, Our Marketplace. Welcome to xpromptNFT AI!
         </p>
         <button
           type="button"
