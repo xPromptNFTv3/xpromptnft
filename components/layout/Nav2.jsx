@@ -48,7 +48,7 @@ const Nav2 = () => {
               &nbsp; */}
               <p className="text-white text-[25px] font-bold">xPromptNFT</p>
             </Link>
-            <div className="hidden sm:flex items-center w-full justify-center transition-all">
+            <div className="hidden sm:flex items-center w-full ml-11 transition-all">
               <div className="flex sm:space-x-4 md:space-x-10 justify-center text-white transition-all">
                 <Link href="/">
                   <button type="button" className="text-base font-normal">
@@ -60,13 +60,18 @@ const Nav2 = () => {
                     Explore
                   </button>
                 </Link>
-                <button
+                  <Link href="/create">
+                  <button type="button" className="text-base font-normal">
+                    Create
+                  </button>
+                </Link>
+                {/* <button
                   type="button"
                   className="text-base font-normal"
                   onClick={handleOpenModal}
                 >
                   Create
-                </button>
+                </button> */}
               </div>
             </div>
             <div className="absolute right-12">

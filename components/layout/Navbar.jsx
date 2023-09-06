@@ -35,10 +35,10 @@ const Navbar = () => {
               className="flex items-center justify-center max-w-[121px] sm:max-w-[161px] px-1 sm:px-[5.33px] transition-all"
               href="/"
             >
-              <div className="text-white text-[20px]">
+              {/* <div className="text-white text-[20px]">
                 <SiBlockchaindotcom />
               </div>
-              &nbsp;
+              &nbsp; */}
               <p className="text-white text-[25px] font-bold">xPromptNFT</p>
             </Link>
             <div className="hidden sm:flex items-center w-full justify-center transition-all">

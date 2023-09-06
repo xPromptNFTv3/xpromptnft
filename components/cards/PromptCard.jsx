@@ -53,8 +53,11 @@ const PromptCard = ({
     }
   };
 
-  const getTokenPrice = async (e) => {
-    const provider = new ethers.providers.JsonRpcProvider(
+  const getTokenPrice = async ( e ) =>
+  {
+    try
+    {
+       const provider = new ethers.providers.JsonRpcProvider(
       'https://goerli.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161'
     );
 
@@ -69,6 +72,11 @@ const PromptCard = ({
     const bigNumber = ethers.BigNumber.from(getTokenPrice._hex);
     const ethValue = ethers.utils.formatEther(bigNumber);
     setEthPrice(ethValue);
+      
+    } catch (error) {
+      console.log(error)
+    }
+   
   };
 
   useEffect(() => {
@@ -105,7 +113,7 @@ const PromptCard = ({
           <div className="w-full">
             <div>
               <img
-                src="https://www.cdnlogo.com/logos/e/81/ethereum-eth.svg"
+                src="https://cryptologos.cc/logos/bnb-bnb-logo.png?v=026"
                 alt=""
                 className="w-[34px] h-[35px] p-1 absolute top-4 right-3 bg-purple-800 rounded-2xl"
               />

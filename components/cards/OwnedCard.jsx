@@ -74,6 +74,7 @@ const OwnedCard = ({
                   }
                   alt=""
                   className="w-[30px] rounded-[30px]"
+                  style={{width:"30px",height:"30px"}}
                 />
                 &nbsp;
                 <div className="flex flex-col ">{ensName && ensName}</div>
