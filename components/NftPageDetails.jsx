@@ -26,6 +26,7 @@ const NftPageDetails = ({
   tokenId,
   owner,
   metadata,
+  date,
 }) => {
   const [openModal, setOpenModal] = useState(false);
   const [maxSupply, setMaxSupply] = useState(0);
@@ -39,9 +40,10 @@ const NftPageDetails = ({
 
   const getIPFSData = async (ipfsUrl) => {
     // Convert IPFS URL to HTTP URL
-    const httpUrl = ipfsUrl.replace('ipfs://', 'https://ipfs.io/ipfs/');
 
-    try {
+    try
+    {
+      const httpUrl = ipfsUrl.replace('ipfs://', 'https://ipfs.io/ipfs/');
       const response = await axios.get(httpUrl);
       return response.data;
     } catch (error) {
@@ -58,7 +60,7 @@ const NftPageDetails = ({
 
   const getSupply = async () => {
     const provider = new ethers.providers.JsonRpcProvider(
-      'https://goerli.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161'
+      'https://bsc-testnet.publicnode.com'
     );
 
     const supplyGetterContract = new ethers.Contract(
@@ -75,7 +77,7 @@ const NftPageDetails = ({
 
   const getTokenPrice = async () => {
     const provider = new ethers.providers.JsonRpcProvider(
-      'https://goerli.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161'
+      'https://bsc-testnet.publicnode.com'
     );
 
     const priceGetterContract = new ethers.Contract(
@@ -181,7 +183,7 @@ const NftPageDetails = ({
 
             <div className="flex justify-center gap-4 mt-3 border-b-2 border-gray-500">
               <h1 className>Date Created:</h1>
-              {/* <p>{date && formatDate(date)}</p> */}
+              <p>{date && formatDate(date)}</p>
             </div>
 
             <div className="flex justify-center gap-4 mt-3 border-b-2 border-gray-500">
@@ -243,7 +245,7 @@ const NftPageDetails = ({
             </div>
             <div className="glassmorphism p-4 text-start w-[210px]">
               <h1 className="font-bold">Chain:</h1>
-              <p> Goerli</p>
+              <p> BSC Smart Chain Testnet</p>
             </div>
             <div className="bg-black/60 border shadow-2xl border-gray-400 p-4 text-start w-[210px]">
               <h1 className="font-bold">Current Supply:</h1>

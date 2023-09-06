@@ -58,7 +58,7 @@ const MintedModal = ({ txHash, openMintModal, handleOnClose }) => {
                     >
                       <a
                         target="_blank"
-                        href={'https://goerli.etherscan.io/tx/' + txHash}
+                        href={'https://testnet.bscscan.com/tx/' + txHash}
                       >
                         Confirm on Explorer
                       </a>

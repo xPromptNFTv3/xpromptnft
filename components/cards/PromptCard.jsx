@@ -31,7 +31,7 @@ const PromptCard = ({
   const { address, isConnected } = useAccount();
   const [sellerAddress, setSellerAddress] = useState('');
 
-  const chainName = 'goerli';
+  const chainName = 'bscTestnet';
   const API_URL = `https://testnets-api.opensea.io/v2/chain/${chainName}/contract/${config.xpromptV3}/nfts/${tokenId}`;
   const apiKey = process.env.NEXT_PUBLIC_OPENSEA_KEY;
 
@@ -58,7 +58,7 @@ const PromptCard = ({
     try
     {
        const provider = new ethers.providers.JsonRpcProvider(
-      'https://goerli.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161'
+      'https://bsc-testnet.publicnode.com'
     );
 
     const priceGetterContract = new ethers.Contract(
@@ -74,7 +74,7 @@ const PromptCard = ({
     setEthPrice(ethValue);
       
     } catch (error) {
-      console.log(error)
+      console.log(error )
     }
    
   };

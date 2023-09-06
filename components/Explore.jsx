@@ -9,48 +9,8 @@ import { config } from '@/abi';
 import convertArrayToObject from '@/utils/convertToObject';
 import { Chain } from '@wagmi/core'
 import { alchemyProvider } from 'wagmi/providers/alchemy';
-import { goerli, bscTestnet } from 'wagmi/chains';
+import {  bscTestnet } from 'wagmi/chains';
 
-
-
-const opBNBTestnet = {
-  id: 5611,
-  name: 'opBNB Testnet',
-  network: 'opBNB Testnet',
-  nativeCurrency: {
-    decimals: 18,
-    name: 'opBNB Testnet',
-    symbol: 'tBNB',
-  },
-  rpcUrls: {
-    public: { http: ['https://opbnb-testnet-rpc.bnbchain.org'] },
-    default: { http: ['https://opbnb-testnet-rpc.bnbchain.org'] },
-  },
-  blockExplorers: {
-    default: { name: 'BSCScan', url: 'http://opbnbscan.com/' },
-    etherscan: { name: 'BSCScan', url: 'http://opbnbscan.com/' },
-  },
-  testnet: true,
-};
-const GreenfieldTestnet = {
-  id: 5600,
-  name: 'Greenfield Mekong Testnet',
-  network: 'Greenfield Mekong Testnet',
-  nativeCurrency: {
-    decimals: 18,
-    name: 'Greenfield Mekong Testnet',
-    symbol: 'tBNB',
-  },
-  rpcUrls: {
-    public: { http: ['https://gnfd-testnet-fullnode-tendermint-us.bnbchain.org'] },
-    default: { http: ['https://gnfd-testnet-fullnode-tendermint-us.bnbchain.org'] },
-  },
-  blockExplorers: {
-    default: { name: 'Greenfieldscan', url: 'https://greenfieldscan.com' },
-    etherscan: { name: 'Greenfieldscan', url: 'https://greenfieldscan.com' },
-  },
-  testnet: true,
-};
 
 
 const Explore = () => {

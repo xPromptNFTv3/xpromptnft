@@ -11,8 +11,8 @@ export const socials = [
     name: 'instagram',
     url: '/instagram.svg',
   },
-  {
-    name: 'facebook',
-    url: '/facebook.svg',
-  },
+  // {
+  //   name: 'facebook',
+  //   url: '/facebook.svg',
+  // },
 ];

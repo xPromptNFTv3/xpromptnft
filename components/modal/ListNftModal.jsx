@@ -6,8 +6,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
 import { IoCheckmarkCircleOutline } from 'react-icons/io5';
 import Link from 'next/link';
-import XPromptV3 from '@/abi/XPromptV3.json';
-import XPromptMarketplace from '@/abi/XPromptMarketplace.json';
+import XPromptV3 from '../../abi/XPromptV3.json';
+import XPromptMarketplace from '../../abi/XPromptMarketplace.json';
 import { config } from '@/abi';
 import { ethers } from 'ethers';
 
@@ -20,7 +20,7 @@ const ListNftModal = ({
   avalaibleQuantity,
 }) => {
   const [nftPrice, setNftPrice] = useState(1);
-  const [network, setNetwork] = useState('avalanche');
+  const [network, setNetwork] = useState('bscTestnet');
   const [quantity, setQuantity] = useState(1);
   const [hasListed, setHasListed] = useState(false);
 
@@ -30,30 +30,44 @@ const ListNftModal = ({
     const provider = new ethers.providers.Web3Provider(window.ethereum);
     const signer = provider.getSigner();
 
-    const avalonNftContract = new ethers.Contract(
+    const xpromptNftContract = new ethers.Contract(
       config.xpromptV3,
       XPromptV3,
       signer
     );
 
     // Approve the marketplace contract to manage the user's tokens
-    const approveTx = await avalonNftContract.setApprovalForAll(
-      config.avalonPromptMarketplace,
+    const approveTx = await xpromptNftContract.setApprovalForAll(
+      config.xPromptMarketplace,
       true
     );
     await approveTx.wait();
     console.log('Marketplace approved');
 
     // Create a contract instance for the marketplace
+    console.log( "provider=============>>>>>>>>>>>>>>>>", provider )
+
     const listPromptContract = new ethers.Contract(
-      config.avalonPromptMarketplace,
-      XPromptMarketplace,
-      signer
+      config.xpromptV3,
+      XPromptV3,
+      provider
     );
 
+  
+
+    // const listPromptContract = new ethers.Contract(
+    //   config.xPromptMarketplace,
+    //   XPromptMarketplace,
+    //   signer
+    // );
+
+    console.log( "token id=============>>>>>>>>>>>>>>>>", tokenId )
+    console.log( "price=============>>>>>>>>>>>>>>>>", ethers.utils.parseEther( nftPrice ) )
+    console.log( "QTY=============>>>>>>>>>>>>>>>>", ethers.BigNumber.from(quantity) )
     const listPrompt = await listPromptContract.createListing(
+      
       tokenId,
-      ethers.utils.parseEther('0.001'),
+      ethers.utils.parseEther(nftPrice),
       ethers.BigNumber.from(quantity)
     );
 
@@ -127,7 +141,7 @@ const ListNftModal = ({
                       <div className="mt-4 flex gap-2 w-full text-center items-center justify-center">
                         <form className=" rounded max-w-sm mx-auto">
                           <label className="text-gray-300 align-start flex mb-2">
-                            Set Price(in AVAX):
+                            Set Price(in tBNB):
                           </label>
                           <input
                             type="number"

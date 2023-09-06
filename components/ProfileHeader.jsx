@@ -122,7 +122,7 @@ const ProfileHeader = () => {
         </div>
 
         {/* Black shadow overlay */}
-        {showRegistrationSteps && (
+        {/* {showRegistrationSteps && (
           <div
             style={{
               position: 'fixed',
@@ -134,9 +134,9 @@ const ProfileHeader = () => {
               zIndex: 998,
             }}
           ></div>
-        )}
+        )} */}
 
-        <div className="z-[999] absolute top-[120px] w-[600px] right-[400px] text-center text-white">
+        {/* <div className="z-[999] absolute top-[120px] w-[600px] right-[400px] text-center text-white">
           {showRegistrationSteps && (
             <>
               <button
@@ -155,7 +155,7 @@ const ProfileHeader = () => {
               </div>
             </>
           )}
-        </div>
+        </div> */}
       </>
     )
   );
