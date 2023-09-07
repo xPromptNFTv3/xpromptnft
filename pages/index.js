@@ -14,7 +14,7 @@ const Home = () => {
             className="absolute w-full h-[calc(700px)] overflow-hidden z-0"
             style={{ maxWidth: '1440px' }}
           >
-            <img
+            {/* <img
               alt="Cream NFT Planet"
               loading="lazy"
               width="311"
@@ -29,8 +29,8 @@ const Home = () => {
                 top: '-44px',
               }}
               src="/planet-nft-cream.png"
-            />
-            <img
+            /> */}
+            {/* <img
               alt="Purple NFT Planet"
               loading="lazy"
               width="308"
@@ -42,7 +42,7 @@ const Home = () => {
                 marginLeft: '-128px',
               }}
               src="/planet-nft-purple.png"
-            />
+            /> */}
           </div>
           <div>
             <Navbar />

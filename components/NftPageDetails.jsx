@@ -172,7 +172,7 @@ const NftPageDetails = ({
           <img
             src={image}
             alt=""
-            className="rounded-xl w-[500px] h-[530px] ml-[100px] mt-6"
+            className="rounded-xl w-[500px] ml-[100px] mt-6"
           />
 
           <div className="flex flex-col justify-center ml-[100px] mt-6 text-gray-300">
@@ -260,7 +260,7 @@ const NftPageDetails = ({
             </h2>
             <div className="border w-[600px] border-gray-300 MT-6" />
             <p className="text-xl my-4 text-gray-200 text-[17px]">
-              <span className="">Price:</span> {ethPrice} ETH &nbsp;
+              <span className="">Price:</span> {ethPrice} tBNB &nbsp;
               {/* <span className="text-[16px] text-gray-300">
                 ~(${balanceInUsd})
               </span> */}

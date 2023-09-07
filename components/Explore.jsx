@@ -57,7 +57,7 @@ const Explore = () => {
       <div className="ml-[60px]">
         <ExploreTab />
       </div>
-      <div className="grid grid-cols-5 gap-6 mt-4 mx-[60px]">
+      <div className="grid grid-cols-4 gap-6 mt-4 mx-[60px]">
         {listedNFTs.length > 0 && // Check if the array is not empty
           listedNFTs.map((nft, index) => (
             <PromptCard

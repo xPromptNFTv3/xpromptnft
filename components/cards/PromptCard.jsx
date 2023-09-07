@@ -115,7 +115,7 @@ const PromptCard = ({
               <img
                 src="https://cryptologos.cc/logos/bnb-bnb-logo.png?v=026"
                 alt=""
-                className="w-[34px] h-[35px] p-1 absolute top-4 right-3 bg-purple-800 rounded-2xl"
+                className="w-[35px] h-[35px] p-1 absolute top-4 right-3 bg-purple-800 rounded-2xl"
               />
             </div>
 
@@ -145,7 +145,7 @@ const PromptCard = ({
             <div className="flex justify-center text-gray-300 gap-12 pt-2">
               <div className="flex flex-col">
                 <p>Price:</p>
-                <p>{ethPrice} ETH </p>
+                <p>{ethPrice} tBNB </p>
               </div>
               <div className="flex flex-col">
                 <p>Rarity:</p>
